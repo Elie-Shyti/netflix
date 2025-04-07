@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flouflix</title>
+    <link rel="stylesheet" href="styles_accueil.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="scripts_connexion_inscription.html" id="logo">Flouflix</a></div>
+        <div class="logo"><a href="scripts_connexion_inscription.html" id="logoSmartphone">F</a></div>
+        <nav>
+                <a href="#" id="new-link">Nouveautés</a>
+                <a href="#" id="series-link">Séries</a>
+                <a href="#" id="movies-link">Films</a>
+                <ul><li><a href="script_profile.html" id="new-link">
+                    <img src="images/default-profile.png" class="profile-icon">
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h1>Bienvenue sur Flouflix</h1>
+        <p>Explorez une bibliothèque riche de films et séries.</p>
+        <button id="watch-now-btn">Regarder maintenant</button>
+    </section>
+
+    <section class="content">
+        <div class="category">
+            <h2>Populaires</h2>
+            <div class="carousel">
+                <button class="prev-btn">‹</button>
+                <div class="carousel-container"></div>
+                <button class="next-btn">›</button>
+            </div>
+        </div>
+
+
+        <div class="category">
+            <h2>Top Séries</h2>
+            <div class="carousel">
+                <button class="prev-btn">‹</button>
+                <div class="carousel-container"></div>
+                <button class="next-btn">›</button>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Les plus regardés</h2>
+            <div class="carousel">
+                <button class="prev-btn">‹</button>
+                <div class="carousel-container"></div>
+                <button class="next-btn">›</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Flouflix &copy; 2024. Tous droits réservés.</p>
+    </footer>
+    <script src="scripts_accueil.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="styles_connexion_inscription.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Se connecter</h1>
+        <form action="traitement_connexion.php" method="post">
+            <div class="containment">
+                <input placeholder="Entrez un pseudo" type="text" id="pseudo" name="pseudo" required>
+                <input placeholder="Entrez un mot de passe" type="password" id="motdepasse" name="motdepasse" required>
+                <button type="submit">Valider</button>
+                <button type="reset">Effacer</button>
+                <button type="button" onclick="window.location.href='MDP Oublie.html';">Compte/Mot de passe oublié</button>
+                <button type="button" onclick="window.location.href='scripts_connexion_inscription.html';">Retour</button>
+            </div>
+        </form>
+    </div>
+    <!-- Inclusion du script de vérification pour la connexion -->
+    <script src="checkLogin.js"></script>
+</body>
+</html>
