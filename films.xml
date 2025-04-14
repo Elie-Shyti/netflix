@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<films>
+  <film>
+    <nom_fichier>avatar.jpg</nom_fichier>
+    <chemin>images/avatar.jpg</chemin>
+    <texte_alternatif>Affiche Avatar</texte_alternatif>
+    <categorie>Les plus regardés</categorie>
+  </film>
+  <film>
+    <nom_fichier>avengers.jpg</nom_fichier>
+    <chemin>images/avengers.jpg</chemin>
+    <texte_alternatif>Affiche Avengers</texte_alternatif>
+    <categorie>Populaires</categorie>
+  </film>
+  <film>
+    <nom_fichier>cyberpunk.jpg</nom_fichier>
+    <chemin>images/cyberpunk.jpg</chemin>
+    <texte_alternatif>Affiche Cyberpunk</texte_alternatif>
+    <categorie>Les plus regardés</categorie>
+  </film>
+  <film>
+    <nom_fichier>doctor who.jpg</nom_fichier>
+    <chemin>images/doctor who.jpg</chemin>
+    <texte_alternatif>Affiche Doctor Who</texte_alternatif>
+    <categorie>Top Séries</categorie>
+  </film>
+  <film>
+    <nom_fichier>friends.jpg</nom_fichier>
+    <chemin>images/friends.jpg</chemin>
+    <texte_alternatif>Affiche Friends</texte_alternatif>
+    <categorie>Top Séries</categorie>
+  </film>
+  <film>
+    <nom_fichier>inception.jpg</nom_fichier>
+    <chemin>images/inception.jpg</chemin>
+    <texte_alternatif>Affiche Inception</texte_alternatif>
+    <categorie>Top Séries</categorie>
+  </film>
+  <film>
+    <nom_fichier>interstellar.jpg</nom_fichier>
+    <chemin>images/interstellar.jpg</chemin>
+    <texte_alternatif>Affiche Interstellar</texte_alternatif>
+    <categorie>Les plus regardés</categorie>
+  </film>
+  <film>
+    <nom_fichier>jurassic park.jpg</nom_fichier>
+    <chemin>images/jurassic park.jpg</chemin>
+    <texte_alternatif>Affiche Jurassic Park</texte_alternatif>
+    <categorie>Populaires</categorie>
+  </film>
+  <film>
+    <nom_fichier>matrix.jpg</nom_fichier>
+    <chemin>images/matrix.jpg</chemin>
+    <texte_alternatif>Affiche Matrix</texte_alternatif>
+    <categorie>Populaires</categorie>
+  </film>
+  <film>
+    <nom_fichier>pulp fiction.jpg</nom_fichier>
+    <chemin>images/pulp fiction.jpg</chemin>
+    <texte_alternatif>Affiche Pulp Fiction</texte_alternatif>
+    <categorie>Les plus regardés</categorie>
+  </film>
+  <film>
+    <nom_fichier>stranger things.jpg</nom_fichier>
+    <chemin>images/stranger things.jpg</chemin>
+    <texte_alternatif>Affiche Stranger Things</texte_alternatif>
+    <categorie>Les plus regardés</categorie>
+  </film>
+  <film>
+    <nom_fichier>the dark knight.jpg</nom_fichier>
+    <chemin>images/the dark knight.jpg</chemin>
+    <texte_alternatif>Affiche The Dark Knight</texte_alternatif>
+    <categorie>Les plus regardés</categorie>
+  </film>
+  <film>
+    <nom_fichier>the godfather.jpg</nom_fichier>
+    <chemin>images/the godfather.jpg</chemin>
+    <texte_alternatif>Affiche The Godfather</texte_alternatif>
+    <categorie>Les plus regardés</categorie>
+  </film>
+</films>

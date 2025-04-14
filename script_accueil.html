@@ -11,15 +11,23 @@
         <div class="logo"><a href="scripts_connexion_inscription.html" id="logo">Flouflix</a></div>
         <div class="logo"><a href="scripts_connexion_inscription.html" id="logoSmartphone">F</a></div>
         <nav>
-                <a href="#" id="new-link">Nouveautés</a>
-                <a href="#" id="series-link">Séries</a>
-                <a href="#" id="movies-link">Films</a>
-                <ul><li><a href="script_profile.html" id="new-link">
+            <a href="#" id="new-link">Nouveautés</a>
+            <a href="#" id="series-link">Séries</a>
+            <a href="#" id="movies-link">Films</a>
+            <ul>
+                <li><a href="script_profile.html" id="new-link">
                     <img src="images/default-profile.png" class="profile-icon">
                 </a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Barre de recherche avec conteneur de suggestions -->
+    <div class="search-bar" style="text-align: center; padding: 10px;">
+        <input type="text" id="search-input" placeholder="Rechercher un film..." style="width: 300px; padding: 8px; border-radius: 4px; border: none;">
+        <!-- Le conteneur pour afficher les suggestions -->
+        <div id="search-suggestions" style="background: #fff; color: #000; width: 300px; margin: 0 auto; border-radius: 4px; max-height: 200px; overflow-y: auto;"></div>
+    </div>
 
     <section class="banner">
         <h1>Bienvenue sur Flouflix</h1>
@@ -27,36 +35,41 @@
         <button id="watch-now-btn">Regarder maintenant</button>
     </section>
 
+    <!-- Sections de catégories (les films seront ajoutés ici via JavaScript) -->
     <section class="content">
+        <!-- (Vos autres catégories : Populaires, Top Séries, etc.) -->
+    
+        <!-- Nouvelle catégorie pour afficher toutes les images -->
         <div class="category">
-            <h2>Populaires</h2>
+            <h2>Toutes les images</h2>
             <div class="carousel">
                 <button class="prev-btn">‹</button>
-                <div class="carousel-container"></div>
-                <button class="next-btn">›</button>
-            </div>
-        </div>
-
-
-        <div class="category">
-            <h2>Top Séries</h2>
-            <div class="carousel">
-                <button class="prev-btn">‹</button>
-                <div class="carousel-container"></div>
-                <button class="next-btn">›</button>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>Les plus regardés</h2>
-            <div class="carousel">
-                <button class="prev-btn">‹</button>
-                <div class="carousel-container"></div>
+                <div class="carousel-container" id="all-images-container"></div>
                 <button class="next-btn">›</button>
             </div>
         </div>
     </section>
-
+    <section class="content">
+        <div class="category">
+            <h2>Top Séries</h2>
+            <div class="carousel">
+                <button class="prev-btn">‹</button>
+                <!-- On attribue un identifiant pour faciliter l'insertion des films -->
+                <div class="carousel-container" id="top-series-container"></div>
+                <button class="next-btn">›</button>
+            </div>
+        </div>
+    
+        <div class="category">
+            <h2>Les plus regardés</h2>
+            <div class="carousel">
+                <button class="prev-btn">‹</button>
+                <!-- On attribue un identifiant pour faciliter l'insertion des films -->
+                <div class="carousel-container" id="les-plus-regardes-container"></div>
+                <button class="next-btn">›</button>
+            </div>
+        </div>
+    </section>
     <footer>
         <p>Flouflix &copy; 2024. Tous droits réservés.</p>
     </footer>
