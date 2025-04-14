@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // 1. Liste de toutes les images (nom + chemin) 
-    //    Adaptez les titres selon vos préférences
     const allImages = [
         { title: "Avatar", path: "images/avatar.jpg" },
         { title: "Avengers", path: "images/avengers.jpg" },
@@ -50,9 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         allImagesContainer.scrollLeft += 200;
     });
 
-    // 5. (Optionnel) Conservez vos autres fonctionnalités JavaScript (barre de recherche, etc.)
-    //    ou supprimez ce qui n’est pas utile. 
-    //    Exemples : watch-now-btn, showDevelopmentAlert, etc.
+    // 5. Conservez vos autres fonctionnalités JavaScript (barre de recherche, etc.)
 
 });
 
@@ -132,42 +129,50 @@ document.addEventListener('DOMContentLoaded', function() {
           console.error("Erreur lors du chargement du fichier XML:", err);
       });
 
-    // 5. Gestion de la barre de recherche avec suggestions
-    // Récupère le champ de recherche et le conteneur de suggestions dans le HTML
-    const searchInput = document.getElementById("search-input");
-    const suggestionsContainer = document.getElementById("search-suggestions");
+// 5. Gestion de la barre de recherche avec suggestions
+// Récupère le champ de recherche et le conteneur de suggestions dans le HTML
+const searchInput = document.getElementById("search-input");
+const suggestionsContainer = document.getElementById("search-suggestions");
 
-    // Lorsque l'utilisateur tape dans le champ de recherche
-    searchInput.addEventListener("keyup", function() {
-        const query = searchInput.value.toLowerCase(); // Converti la recherche en minuscules
-        suggestionsContainer.innerHTML = ""; // Vide le conteneur de suggestions
+// Lorsque l'utilisateur tape dans le champ de recherche
+searchInput.addEventListener("keyup", function() {
+    const query = searchInput.value.toLowerCase(); // Convertir la recherche en minuscules pour une comparaison insensible à la casse
+    suggestionsContainer.innerHTML = ""; // Vider le conteneur de suggestions
 
-        // Si la recherche n'est pas vide, on crée la liste de suggestions
-        if (query.trim() !== "") {
-            // Filtre les films dont le titre contient le texte recherché
-            const suggestions = allFilms.filter(function(film) {
-                return film.nom_fichier.toLowerCase().includes(query);
+    // Si la recherche n'est pas vide, créer la liste de suggestions
+    if (query.trim() !== "") {
+        // Filtrer les films dont le nom contient le texte recherché
+        const suggestions = allFilms.filter(function(film) {
+            return film.nom_fichier.toLowerCase().includes(query);
+        });
+
+        // Pour chaque film suggéré, créer un élément qui inclut à la fois l'image et le titre
+        suggestions.forEach(function(film) {
+            var suggestionItem = document.createElement("div");
+            suggestionItem.classList.add("suggestion-item");
+
+            // On crée le contenu HTML avec une image et le nom du film
+            // Vous pouvez ajuster la taille de l'image via le style inline ou via votre fichier CSS
+            suggestionItem.innerHTML = `
+                <img src="${film.chemin}" alt="${film.texte_alternatif}" style="width:40px;height:auto;margin-right:5px;">
+                <span>${film.nom_fichier}</span>
+            `;
+
+            // Quand on clique sur une suggestion, on fait défiler la page jusqu'à la carte correspondante
+            suggestionItem.addEventListener("click", function() {
+                // Recherche la carte par rapport à l'attribut data-film-chemin
+                var targetCard = document.querySelector(`.movie-card[data-film-chemin="${film.chemin}"]`);
+                if (targetCard) {
+                    // Défilement fluide jusqu'à la carte
+                    targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
+                }
             });
 
-            // Pour chaque suggestion trouvée, on crée un élément de suggestion
-            suggestions.forEach(function(film) {
-                var suggestionItem = document.createElement("div");
-                suggestionItem.classList.add("suggestion-item");
-                suggestionItem.textContent = film.nom_fichier;
-                // Quand on clique sur une suggestion, la page défile jusqu'à la carte correspondante
-                suggestionItem.addEventListener("click", function() {
-                    // Recherche la carte dont l'attribut data-film-chemin correspond au film cliqué
-                    var targetCard = document.querySelector(`.movie-card[data-film-chemin="${film.chemin}"]`);
-                    if(targetCard) {
-                        // Fait défiler la page jusqu'à la carte de manière fluide
-                        targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
-                    }
-                });
-                // Ajoute la suggestion dans le conteneur de suggestions
-                suggestionsContainer.appendChild(suggestionItem);
-            });
-        }
-    });
+            // Ajouter la suggestion dans le conteneur
+            suggestionsContainer.appendChild(suggestionItem);
+        });
+    }
+});
 
     // 6. Gestion des boutons du carrousel
     document.querySelectorAll('.category').forEach(function(categoryEl) {

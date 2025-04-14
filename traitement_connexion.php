@@ -49,20 +49,20 @@ try {
             } else {
                 // Si le mot de passe fourni ne correspond pas, on redirige vers le formulaire de connexion
                 // avec un message d'erreur indiquant "Mot de passe incorrect."
-                header("Location: scripts_connexion.html?error=" . urlencode("Mot de passe incorrect."));
+                header("Location: scripts_connexion.html?error=passwordFalse" . urlencode("Mot de passe incorrect."));
                 exit;
             }
         } else {
             // Si aucun compte n'est trouvé pour le pseudo donné, on redirige vers le formulaire de connexion
             // en passant un message d'erreur indiquant qu'aucun compte n'a été trouvé
-            header("Location: scripts_connexion.html?error=" . urlencode("Aucun compte trouvé avec ce pseudo."));
+            header("Location: scripts_connexion.html?error=accountNotFound" . urlencode("Aucun compte trouvé avec ce pseudo."));
             exit;
         }
     }
 } catch (PDOException $e) {
     // En cas d'erreur liée à la base de données (connexion, requête, etc.),
     // on redirige également vers le formulaire de connexion, en ajoutant le message d'erreur dans l'URL.
-    header("Location: scripts_connexion.html?error=" . urlencode("Erreur PDO : " . $e->getMessage()));
+    header("Location: scripts_connexion.html?error=PDOError" . urlencode("Erreur PDO : " . $e->getMessage()));
     exit;
 }
 ?>

@@ -48,13 +48,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Après l'insertion réussie, on redirige l'utilisateur vers la page d'administration (admin_images.php)
         // en passant un message de succès dans l'URL.
-        header("Location: admin_images.php?message=" . urlencode("Image ajoutée avec succès."));
+        header("Location: admin_images.php?message=succes" . urlencode("Image ajoutée avec succès."));
         exit; // Termine le script après la redirection.
 
     } catch (PDOException $e) {
         // Si une exception (erreur) se produit lors de l'insertion (par exemple, problème de connexion, doublon, etc.),
         // on redirige l'utilisateur vers la page d'administration avec un message d'erreur dans l'URL.
-        header("Location: admin_images.php?error=" . urlencode("Erreur PDO : " . $e->getMessage()));
+        header("Location: admin_images.php?error=insertionError" . urlencode("Erreur PDO : " . $e->getMessage()));
         exit;
     }
 } else {

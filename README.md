@@ -31,7 +31,8 @@ CREATE TABLE IF NOT EXISTS images (
   texte_alternatif VARCHAR(255),
   categorie VARCHAR(50) NOT NULL,
   date_ajout TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ;```
+) ;
+```
 
 
 ### Table `utilisateurs`
@@ -47,33 +48,57 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
   telephone VARCHAR(20),
   sexe VARCHAR(20),
   admin TINYINT(1) DEFAULT 0
-); ```
+); 
+```
 
 ## Structure du Projet
 
 /Flouflix/
-├── admin_images.php                // Page d'administration avec formulaire d'ajout d'image/film
-├── checkLogin.js                   // Script JS pour la vérification de la connexion (ex. mot de passe)
-├── checkPassword.js                // Script JS pour la vérification du mot de passe sur le formulaire
-├── connexion_bdd_images.php        // (Ex. script de connexion dédié à l'accès BDD pour images)
-├── films.xml                       // Fichier XML listant vos films (complément ou alternative à la BDD)
-├── README.md                       // Ce fichier de documentation
-├── script_accueil.html             // Page d'accueil : carrousel, barre de recherche, etc.
-├── script_profile.html             // Page de profil (choix de profil, etc.)
-├── scripts_accueil.js              // Logique d'affichage : carrousel, recherche, chargement des films
-├── scripts_connexion.html          // Page de connexion
-├── scripts_connexion_inscription.html // Page proposant de choisir entre connexion et inscription
-├── scripts_inscription.html        // Page d'inscription
-├── scripts_profile.js              // Logique pour la gestion des profils
-├── styles_accueil.css              // Styles pour la page d'accueil
-├── styles_connexion_inscription.css // Styles pour les pages connexion/inscription
-├── styles_profile.css              // Styles pour la page de profil
-├── traitement_ajout_image.php      // Script PHP pour traiter l'ajout d'une image (dans la BDD & le XML)
-├── traitement_connexion.php        // Script PHP pour valider la connexion (pseudo/mdp) et rediriger
-├── traitement_inscription.php      // Script PHP pour gérer l'inscription d'un nouvel utilisateur
+- ├── admin_images.php                
+  Page d'administration avec formulaire d'ajout d'image/film
+- ├── checkLogin.js                   
+  Script JS pour la vérification de la connexion (ex. mot de passe)
+- ├── checkPassword.js                
+  Script JS pour la vérification du mot de passe sur le formulaire  
+- ├── connexion_bdd_images.php        
+  (Ex. script de connexion dédié à l'accès BDD pour images)
+- ├── Explication.md                  
+  Explication pour l'utilisation du netflix
+- ├── films.xml                       
+  Fichier XML listant vos films (complément ou alternative à la BDD)
+- ├── README.md                       
+  Ce fichier de documentation
+- ├── script_accueil.html             
+  Page d'accueil : carrousel, barre de recherche, etc.
+- ├── script_profile.html             
+  Page de profil (choix de profil, etc.)
+- ├── scripts_accueil.js              
+  Logique d'affichage : carrousel, recherche, chargement des films
+- ├── scripts_connexion.html          
+  Page de connexion
+- ├── scripts_connexion_inscription.html 
+  Page proposant de choisir entre connexion et inscription
+- ├── scripts_inscription.html        
+  Page d'inscription
+- ├── scripts_profile.js              
+  Logique pour la gestion des profils
+- ├── styles_accueil.css              
+  Styles pour la page d'accueil
+- ├── styles_connexion_inscription.css
+  Styles pour les pages connexion/inscription
+- ├── styles_profile.css              
+  Styles pour la page de profil
+- ├── traitement_image.php                
+  Script PHP pour traiter l'ajout d'une image (dans le XML)
+- ├── traitement_ajout_image.php      
+  Script PHP pour traiter l'ajout d'une image (dans la BDD &)
+- ├── traitement_connexion.php        
+  Script PHP pour valider la connexion (pseudo/mdp) et rediriger
+- ├── traitement_inscription.php      
+  Script PHP pour gérer l'inscription d'un nouvel utilisateur
 
 ## remarque 
 
--Ce projet est fourni à titre d'exemple. Vous devrez peut-être ajuster les identifiants et la configuration PHP/MySQL selon votre environnement.
--Chaque composant comporte, dans la mesure du possible, des commentaires pour faciliter la compréhension.
--Pour plus de détails, n'hésitez pas à consulter les commentaires dans les fichiers sources. Vous pouvez également adapter la logique de synchronisation entre la BDD et le   fichier XML pour répondre à vos besoins. 
+- e projet est fourni à titre d'exemple. Vous devrez peut-être ajuster les identifiants et la configuration PHP/MySQL selon votre environnement.
+- Chaque composant comporte, dans la mesure du possible, des commentaires pour faciliter la compréhension.
+- Pour plus de détails, n'hésitez pas à consulter les commentaires dans les fichiers sources. Vous pouvez également adapter la logique de synchronisation entre la BDD et le   fichier XML pour répondre à vos besoins. 
